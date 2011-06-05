@@ -93,7 +93,7 @@ public class AndroidTemplate {
         template+="android:versionCode='1'"+"\n";
         template+="android:versionName='1.0'>"+"\n";
         template+="<application android:icon='@drawable/icon' android:label='@string/app_name'>"+"\n";
-        template+="<activity android:name='."+app_name+"'"+"\n";
+        template+="<activity android:name='"+app_name+"'"+"\n";
         template+="android:label='@string/app_name'>"+"\n";
         template+="<intent-filter>"+"\n";
         template+="<action android:name='android.intent.action.MAIN' />"+"\n";

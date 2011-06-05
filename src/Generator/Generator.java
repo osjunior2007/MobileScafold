@@ -71,7 +71,8 @@ public class Generator {
           _xmlParser.addActivity(System.getProperty("user.dir")+"/"+MANIFEST,ActivityName);
           data.createPackageFolder(System.getProperty("user.dir")+"/src",PackageName); 
           fileManager.CreateFile(System.getProperty("user.dir")+"/src/"+data.getPackagePath(PackageName)+"/"+ActivityName+".java",androidTemplate.CreateActiviy(ActivityName,PackageName,ActivityName.toLowerCase()));
-          
+          fileManager.CreateFile(System.getProperty("user.dir")+"/res/layout/"+ActivityName.toLowerCase()+".xml",androidTemplate.creatLoginPageView());
+            
      }
     
     
