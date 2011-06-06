@@ -35,7 +35,16 @@ public class XmlParser {
     }
     
     
-    public String getPackageName(String path)
+    public String getCurrentPackageName(String path)
+    {
+        String result="";
+        
+        return result;
+    }
+    
+    
+    
+    public String getParentPackageName(String path)
     {
        String result="";
             

@@ -67,7 +67,7 @@ public class Generator {
     
     public void LoginPage(String ActivityName,String PackageName)
     {
-          String parent_path=_xmlParser.getPackageName(System.getProperty("user.dir")+"/"+MANIFEST);
+          String parent_path=_xmlParser.getParentPackageName(System.getProperty("user.dir")+"/"+MANIFEST);
           data=new InputData();
           _xmlParser.addActivity(System.getProperty("user.dir")+"/"+MANIFEST,ActivityName,PackageName);
           data.createPackageFolder(System.getProperty("user.dir")+"/src",PackageName); 

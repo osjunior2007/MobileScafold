@@ -59,9 +59,23 @@ public class MobileScafold {
                    System.out.println("It is not a  Android Project. ");
                    
                 } 
-          }
+           }
             
+            if(GENERATE.equals(GENERATE_FORM))
+            {
+               sw=true;
+               String package_name=getCurrentPackageName(System.getProperty("user.dir"));
+               if(getPackageIdentifiers(package_name)){
+                   System.out.println(package_name);
+               }else
+               {
+                System.out.println("Package name must have at least two identifiers");   
+                sw=false;  
+               }
+            } 
             
-            System.out.println(sw==true ? "Project Crated Succesful." : "Command not found.");
+     
+                
+        System.out.println(sw==true ? "Project Crated Succesful." : "Command not found.");
     } 
 }
