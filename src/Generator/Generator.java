@@ -60,17 +60,18 @@ public class Generator {
             data=new InputData();
             data.createPackageGen(DIR_PWD+"/"+PROJECT_NAME+"/gen/",PACHAGE_NAME);
             data.createPackageFolder(DIR_PWD+"/"+PROJECT_NAME+"/src/",PACHAGE_NAME);
-            fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/src/"+data.getPackagePath(PACHAGE_NAME)+"/"+PROJECT_NAME+".java",androidTemplate.CreateActiviy(PROJECT_NAME,PACHAGE_NAME,"main"));
+            fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/src/"+data.getPackagePath(PACHAGE_NAME)+"/"+PROJECT_NAME+".java",androidTemplate.CreateActiviy(PROJECT_NAME,PACHAGE_NAME,PACHAGE_NAME,"main"));
             fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/gen/"+data.getPackagePath(PACHAGE_NAME)+"/R.java",androidTemplate.Create_R_File(PACHAGE_NAME));
             
     }
     
     public void LoginPage(String ActivityName,String PackageName)
     {
+          String parent_path=_xmlParser.getPackageName(System.getProperty("user.dir")+"/"+MANIFEST);
           data=new InputData();
           _xmlParser.addActivity(System.getProperty("user.dir")+"/"+MANIFEST,ActivityName,PackageName);
           data.createPackageFolder(System.getProperty("user.dir")+"/src",PackageName); 
-          fileManager.CreateFile(System.getProperty("user.dir")+"/src/"+data.getPackagePath(PackageName)+"/"+ActivityName+".java",androidTemplate.CreateActiviy(ActivityName,PackageName,ActivityName.toLowerCase()));
+          fileManager.CreateFile(System.getProperty("user.dir")+"/src/"+data.getPackagePath(PackageName)+"/"+ActivityName+".java",androidTemplate.CreateActiviy(ActivityName,PackageName,parent_path,ActivityName.toLowerCase()));
           fileManager.CreateFile(System.getProperty("user.dir")+"/res/layout/"+ActivityName.toLowerCase()+".xml",androidTemplate.creatLoginPageView());
             
      }

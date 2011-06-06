@@ -107,11 +107,11 @@ public class AndroidTemplate {
     }
     
     
-    public String CreateActiviy(String name,String package_name,String layout)
+    public String CreateActiviy(String name,String package_name,String parent_path,String layout)
     {
         String template="";
         template += "package "+package_name+";" + "\n";
-        template +="import "+package_name+".R;" + "\n";
+        template +="import "+parent_path+".R;" + "\n";
         template += "import android.app.Activity;" + "\n";
         template += "import android.os.Bundle;" + "\n"+ "\n";
         template += "public class "+name+" extends Activity {" + "\n";
