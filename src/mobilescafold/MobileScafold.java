@@ -21,10 +21,7 @@ public class MobileScafold {
     public  static String PACHAGE_NAME=""; 
     public  static String ACTIVITY_NAME=""; 
     public static  Boolean sw=false;
-               
-
     public static Generator generator;
-    
     
     public static void main(String[] args) {
             sw=false;
@@ -62,10 +59,9 @@ public class MobileScafold {
                    System.out.println("It is not a  Android Project. ");
                    
                 } 
-           }
+          }
             
             
             System.out.println(sw==true ? "Project Crated Succesful." : "Command not found.");
-            
-    }
+    } 
 }

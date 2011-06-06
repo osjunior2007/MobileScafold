@@ -36,7 +36,7 @@ public class Generator {
     {
             DIR_PWD=System.getProperty("user.dir");
             fileManager.CreateDirectory(DIR_PWD+"/"+PROJECT_NAME);
-            fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/AndroidManifest.xml", androidTemplate.CreateAndroidManifes(PACHAGE_NAME,PACHAGE_NAME));
+            fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/AndroidManifest.xml", androidTemplate.CreateAndroidManifes(PACHAGE_NAME,PROJECT_NAME));
             fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/defaul.property", "target=android-7");
             fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/.classpath", "");
              fileManager.CreateFile(DIR_PWD+"/"+PROJECT_NAME+"/.project",androidTemplate.createNBProject(PROJECT_NAME));
@@ -68,7 +68,7 @@ public class Generator {
     public void LoginPage(String ActivityName,String PackageName)
     {
           data=new InputData();
-          _xmlParser.addActivity(System.getProperty("user.dir")+"/"+MANIFEST,ActivityName);
+          _xmlParser.addActivity(System.getProperty("user.dir")+"/"+MANIFEST,ActivityName,PackageName);
           data.createPackageFolder(System.getProperty("user.dir")+"/src",PackageName); 
           fileManager.CreateFile(System.getProperty("user.dir")+"/src/"+data.getPackagePath(PackageName)+"/"+ActivityName+".java",androidTemplate.CreateActiviy(ActivityName,PackageName,ActivityName.toLowerCase()));
           fileManager.CreateFile(System.getProperty("user.dir")+"/res/layout/"+ActivityName.toLowerCase()+".xml",androidTemplate.creatLoginPageView());
@@ -77,3 +77,4 @@ public class Generator {
     
     
 }
+

@@ -93,7 +93,7 @@ public class AndroidTemplate {
         template+="android:versionCode='1'"+"\n";
         template+="android:versionName='1.0'>"+"\n";
         template+="<application android:icon='@drawable/icon' android:label='@string/app_name'>"+"\n";
-        template+="<activity android:name='"+app_name+"'"+"\n";
+        template+="<activity android:name='"+package_name+"."+app_name+"'"+"\n";
         template+="android:label='@string/app_name'>"+"\n";
         template+="<intent-filter>"+"\n";
         template+="<action android:name='android.intent.action.MAIN' />"+"\n";
@@ -111,6 +111,7 @@ public class AndroidTemplate {
     {
         String template="";
         template += "package "+package_name+";" + "\n";
+        template +="import "+package_name+".R;" + "\n";
         template += "import android.app.Activity;" + "\n";
         template += "import android.os.Bundle;" + "\n"+ "\n";
         template += "public class "+name+" extends Activity {" + "\n";
@@ -163,22 +164,20 @@ public class AndroidTemplate {
 	template+="android:layout_marginTop='15px' android:weightSum='1.0'>"+"\n";
 	template+="<TextView android:id='@+id/label_username'"+"\n";
 	template+="android:layout_width='fill_parent' android:layout_height='wrap_content'"+"\n";
-	template+="android:textColor='@color/color_text' android:textStyle='bold' android:text='Email' />"+"\n";
+	template+="android:textStyle='bold' android:text='Username' />"+"\n";
         
         template+="<EditText android:id='@+id/username' android:layout_width='fill_parent'"+"\n";
 	template+="android:lines='1' android:layout_height='wrap_content'"+"\n";
-	template+="android:background='@android:drawable/editbox_background'"+"\n";
 	template+="android:layout_below='@id/label_username'"+"\n";
 	template+="android:layout_marginBottom='10px' />"+"\n";
 
         template+="<TextView android:id='@+id/label_password'"+"\n";
         template+="android:layout_width='fill_parent' android:layout_height='wrap_content'"+"\n";
-        template+="android:text='Password' android:textStyle='bold' android:textColor='@color/color_text'"+"\n";
+        template+="android:text='Password' android:textStyle='bold' "+"\n";
         template+="android:layout_below='@id/username' />"+"\n";
 
         template+="<EditText android:id='@+id/password' android:layout_width='fill_parent'"+"\n";
         template+="android:inputType='textPassword' android:layout_height='wrap_content'"+"\n";
-        template+="android:background='@android:drawable/editbox_background'"+"\n";
         template+="android:layout_marginBottom='10px' android:layout_below='@id/label_password' />"+"\n";
 
         template+="<LinearLayout android:id='@+id/layout_buttons'"+"\n";
@@ -188,21 +187,20 @@ public class AndroidTemplate {
 
         template+="<RelativeLayout android:layout_weight='.5'"+"\n";
         template+="android:layout_width='wrap_content' android:layout_height='wrap_content'>"+"\n";
-        template+="<Button android:id='@+id/sign_up' "+"\n";
-        template+="android:layout_width='wrap_content' android:layout_height='wrap_content'"+"\n";
+        template+="<Button android:id='@+id/sign_up' android:text='SignUp'"+"\n";
+        template+="android:layout_width='fill_parent' android:layout_height='wrap_content'"+"\n";
         template+="android:layout_centerInParent='true' "+"\n";
         template+="android:layout_marginRight='1.5px'/>"+"\n";
         template+="</RelativeLayout>"+"\n";
 
         template+="<RelativeLayout android:layout_weight='.5'"+"\n";
 	template+="android:layout_width='wrap_content' android:layout_height='wrap_content'>"+"\n";
-	template+="<Button android:id='@+id/login_btn' "+"\n";
+	template+="<Button android:id='@+id/login_btn' android:text='Login' "+"\n";
 	template+="android:layout_marginLeft='1.5px'"+"\n";
-	template+="android:layout_width='wrap_content' android:layout_height='wrap_content'"+"\n";
+	template+="android:layout_width='fill_parent' android:layout_height='wrap_content'"+"\n";
 	template+="android:layout_centerInParent='true' />"+"\n";
 	template+="</RelativeLayout>"+"\n";
 	template+="</LinearLayout>"+"\n";
-        template+="</LinearLayout>"+"\n";
         template+="</LinearLayout>"+"\n";
         template+="</RelativeLayout>"+"\n";
         
