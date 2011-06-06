@@ -76,6 +76,15 @@ public class Generator {
             
      }
     
+    public void FormView(String ActivityName,String PackageName)
+    {
+        String parent_path=_xmlParser.getParentPackageName(System.getProperty("user.dir")+"/"+MANIFEST);
+         data=new InputData();
+        _xmlParser.addActivity(System.getProperty("user.dir")+"/"+MANIFEST,ActivityName,PackageName);
+         
+    
+    }
+    
     
 }
 
