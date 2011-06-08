@@ -24,7 +24,7 @@ public class MobileScafold {
     public static Generator generator;
     
     public static void main(String[] args) {
-            sw=false;
+           /* sw=false;
             GENERATE=args[0];
             DIR_PWD=System.getProperty("user.dir");    
 	    PROJECT_NAME=(args.length>=2 ? args[1] : "MobileExample" ); 
@@ -76,6 +76,7 @@ public class MobileScafold {
             
      
                 
-        System.out.println(sw==true ? "Project Crated Succesful." : "Command not found.");
+        System.out.println(sw==true ? "Project Crated Succesful." : "Command not found.");*/
+        System.out.println( "name:text".split(":")[1]);
     } 
 }

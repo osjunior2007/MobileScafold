@@ -4,6 +4,7 @@
  */
 package mobilescafold.util;
 
+
 /**
  *
  * @author oscar rodriguez
@@ -75,23 +76,8 @@ public class Constants {
              } 
            i++;  
         }
-        
-        if(cont>=1)
-        {
-          return true;
-        }else
-        {
-          return false;
-        }
-    
+      return (cont>=1 ? true : false );
     }
     
-    
-    public static void getAttributes(String[] params)
-    
-    {
-    
-    }
-
     
 }
