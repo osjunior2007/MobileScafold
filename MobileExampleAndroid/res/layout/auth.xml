@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'
+android:layout_width='fill_parent' android:layout_height='fill_parent'
+android:paddingLeft='30px' android:paddingRight='30px'>
+<LinearLayout android:id='@+id/header'
+android:orientation='horizontal' android:layout_width='fill_parent'
+android:layout_height='wrap_content' android:layout_marginTop='10px'
+android:layout_marginBottom='20px' android:weightSum='1.0'>
+</LinearLayout>
+<LinearLayout android:id='@+id/layout_forms'
+android:layout_below='@+id/header' android:orientation='vertical'
+android:layout_width='fill_parent' android:layout_height='wrap_content'
+android:layout_marginTop='15px' android:weightSum='1.0'>
+<TextView android:id='@+id/label_username'
+android:layout_width='fill_parent' android:layout_height='wrap_content'
+android:textStyle='bold' android:text='Username' />
+<EditText android:id='@+id/username' android:layout_width='fill_parent'
+android:lines='1' android:layout_height='wrap_content'
+android:layout_below='@id/label_username'
+android:layout_marginBottom='10px' />
+<TextView android:id='@+id/label_password'
+android:layout_width='fill_parent' android:layout_height='wrap_content'
+android:text='Password' android:textStyle='bold' 
+android:layout_below='@id/username' />
+<EditText android:id='@+id/password' android:layout_width='fill_parent'
+android:inputType='textPassword' android:layout_height='wrap_content'
+android:layout_marginBottom='10px' android:layout_below='@id/label_password' />
+<LinearLayout android:id='@+id/layout_buttons'
+android:layout_width='fill_parent' android:layout_height='wrap_content'
+android:layout_below='@id/password' android:layout_marginBottom='10px'
+android:weightSum='1.0'>
+<RelativeLayout android:layout_weight='.5'
+android:layout_width='wrap_content' android:layout_height='wrap_content'>
+<Button android:id='@+id/sign_up' android:text='SignUp'
+android:layout_width='fill_parent' android:layout_height='wrap_content'
+android:layout_centerInParent='true' 
+android:layout_marginRight='1.5px'/>
+</RelativeLayout>
+<RelativeLayout android:layout_weight='.5'
+android:layout_width='wrap_content' android:layout_height='wrap_content'>
+<Button android:id='@+id/login_btn' android:text='Login' 
+android:layout_marginLeft='1.5px'
+android:layout_width='fill_parent' android:layout_height='wrap_content'
+android:layout_centerInParent='true' />
+</RelativeLayout>
+</LinearLayout>
+</LinearLayout>
+</RelativeLayout>
+

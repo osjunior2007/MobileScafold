@@ -16,6 +16,7 @@ import org.w3c.dom.*;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -92,6 +93,8 @@ public class XmlParser {
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+              
             DOMSource source = new DOMSource(doc);
             StreamResult result = new StreamResult(new File(path));
             transformer.transform(source, result);

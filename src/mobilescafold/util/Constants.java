@@ -6,7 +6,7 @@ package mobilescafold.util;
 
 /**
  *
- * @author oscarrodriguez
+ * @author oscar rodriguez
  */
 public class Constants {
     public static String GENERATE_APP="app";
@@ -86,6 +86,12 @@ public class Constants {
     
     }
     
+    
+    public static void getAttributes(String[] params)
+    
+    {
+    
+    }
 
     
 }
